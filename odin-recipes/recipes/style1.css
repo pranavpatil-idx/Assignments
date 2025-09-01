@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff8e1, #fce4ec);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #d32f2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #d32f2f;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+.v1{
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 80vh;
+}
+
+@media (max-width: 600px) {
+  .v1 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.h2 {
+  text-align: center;
+  margin: 30px 0 15px;
+  font-size: 1.8rem;
+  color: #d32f2f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.para {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1rem;
+  text-align: center;
+  color: #444;
+  line-height: 1.8;
+  background: #ffffffaa;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.para:hover{
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.main-1 {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  list-style: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.main-1 li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.main-1 li:hover {
+  background: #fce4ec;
+  font-weight: 500;
+  transform: translateX(5px);
+}
+
+.main-1 li:last-child {
+  border-bottom: none;
+}
+
+.main-2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  counter-reset: step-counter;
+}
+
+.main-2 li {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+  list-style: none;
+  position: relative;
+}
+
+.main-2 li:hover {
+  transform: translateY(-5px);
+}
+
+.main-2 li::before {
+  counter-increment: step-counter;
+  content: "Step " counter(step-counter);
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #d32f2f;
+  color: white;
+  font-size: 0.9rem;
+  padding: 3px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.main-2 p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.home-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  padding: 12px 24px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+a{
+  text-decoration: none;
+}
