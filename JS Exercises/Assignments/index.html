@@ -6,6 +6,14 @@
     <title>JavaScript Assignment</title>
 </head>
 <body>
+
+    <h1>JavaScript String Methods</h1>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo">Please visit Microsoft and Microsoft!</p>
+
     <script>
 
         // console.log(23+97);
@@ -52,31 +60,43 @@
         // console.log(myNumber);
 
         // Strings
-        let text1 = "ABCDE,PRANAV";
-        let text2 = "EFGHI";
+        let text1 = "ABCDE|PRANAV";
+        let text2 = "Please visit Microsoft and Microsoft";
 
         // let result = text1.replaceAll("ABCDE","EFGHI");
         // console.log(result)
 
-        let result = text1.split(",");
+        let result = text1.split("|");
         console.log(result);
 
         // let result = text2.repeat(2);
         // console.log(result);
 
-        // let newtext = text2.replace("FGHIJ","Microsoft");
+        // let newtext = text2.replace("Mircrosoft","Pranav");
         // console.log(newtext);
 
-        let lw = text1.toLowerCase();
-        console.log(lw);
+        function myFunction() {
+        let text = document.getElementById("demo").innerHTML; 
+        document.getElementById("demo").innerHTML =
+        text.replace("Microsoft","W3Schools");
+        }
+
+        // const originalString = "I like dogs because dogs are adorable!";
+        // const newString = originalString.replaceAll("dogs", "cats");
+
+        // console.log(originalString);
+        // console.log(newString);  
+
+        // let lw = text1.toLowerCase();
+        // console.log(lw);
         
-        let text3 = text1.concat(" ", text2);
-        console.log(text3);
+        // let text3 = text1.concat(" ", text2);
+        // console.log(text3);
 
         // let fruits = "Apple,Banana,Orange";
         // let newtxt = fruits.slice(4,15);
-        // let newtxt = fruits.substring(4,15);
-        // let newtxt = fruits.substr(7,8);
+        // let newtxt = fruits.substring(0,15);
+        // let newtxt = fruits.substr(7,6);
         // console.log(newtxt);
 
         // let text = "5";
@@ -84,21 +104,21 @@
         // let padded = text.pad(5,"0"); padEnd, padStart.
         // console.log(padded)
 
-        let ans = text1.length;
-        console.log(ans);
+        // let ans = text1.length;
+        // console.log(ans);
 
-        let text4 = "    Namaste JS       ";
-        let tr = text4.trim();
-        console.log(tr);
+        // let text4 = "    Namaste JS       ";
+        // let tr = text4.trim();
+        // console.log(tr);
 
-        let char = text1.charAt(1);
-        console.log(char);
+        // let char = text1.charAt(1);
+        // console.log(char);
 
-        let ch = text1.at(2);
-        console.log(ch);
+        // let ch = text1.at(2);
+        // console.log(ch);
 
-        let txt = text1[3];
-        console.log(txt);
+        // let txt = text1[3];
+        // console.log(txt);
             
     </script>
 </body>
